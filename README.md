@@ -10,6 +10,6 @@ Installation
 -----------
 Install it with `bower`
 
-  bower install angular-swiper-repeat
+    bower install angular-swiper-repeat
 
 or [download files manually](https://github.com/ibtkvi/angular-swiper-repeat)
