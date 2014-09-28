@@ -1,0 +1,20 @@
+{
+  "name": "swiperRepeat",
+  "version": "0.1.1",
+  "authors": [
+    "ibtkvi <ibtkvi@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.2.1",
+    "angular-mocks": "^1.2.1"
+  }
+}
