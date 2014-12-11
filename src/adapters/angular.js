@@ -8,7 +8,8 @@ angular.module('swiperRepeat', ['ng'])
       preventDefault: true,
       stopPropagation: false,
       prerender: false,
-      retranslator: null
+      retranslator: null,
+      disableTouch: false
     };
 
     return {
@@ -90,11 +91,12 @@ angular.module('swiperRepeat', ['ng'])
           options.prerender ? RendererFull(slideFactory) : RendererPart(slideFactory)
         );
 
-
-        container.on('touchstart', touchEventHandler(swiper.onTouchStart));
-        container.on('touchmove', touchEventHandler(swiper.onTouchMove));
-        container.on('touchend', touchEventHandler(swiper.onTouchEnd));
-
+        if(!options.disableTouch) {
+          container.on('touchstart', touchEventHandler(swiper.onTouchStart));
+          container.on('touchmove', touchEventHandler(swiper.onTouchMove));
+          container.on('touchend', touchEventHandler(swiper.onTouchEnd));  
+        }
+        
         function touchEventHandler(fn) {
           return function(event) {
             options.preventDefault && event.preventDefault();
